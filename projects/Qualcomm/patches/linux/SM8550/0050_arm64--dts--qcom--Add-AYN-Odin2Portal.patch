@@ -112,7 +112,7 @@ index 000000000000..f04c275966e4
 +
 +&gpu {
 +	zap-shader {
-+		firmware-name = "qcom/sm8550/ayn/odin2portal/a740_zap.mbn";
++		firmware-name = "qcom/sm8550/ayn/odin2/a740_zap.mbn";
 +	};
 +};
 +
@@ -285,21 +285,21 @@ index 000000000000..f04c275966e4
 +};
 +
 +&remoteproc_adsp {
-+	firmware-name = "qcom/sm8550/ayn/odin2portal/adsp.mbn",
-+			"qcom/sm8550/ayn/odin2portal/adsp_dtb.mbn";
++	firmware-name = "qcom/sm8550/ayn/odin2/adsp.mbn",
++			"qcom/sm8550/ayn/odin2/adsp_dtb.mbn";
 +	status = "okay";
 +};
 +
 +&remoteproc_cdsp {
-+	firmware-name = "qcom/sm8550/ayn/odin2portal/cdsp.mbn",
-+			"qcom/sm8550/ayn/odin2portal/cdsp_dtb.mbn";
++	firmware-name = "qcom/sm8550/ayn/odin2/cdsp.mbn",
++			"qcom/sm8550/ayn/odin2/cdsp_dtb.mbn";
 +	status = "okay";
 +};
 +
 +&spk_amp_l {
-+	firmware-name = "qcom/sm8550/ayn/odin2portal/aw883xx_acf.bin";
++	firmware-name = "qcom/sm8550/ayn/odin2/aw883xx_acf.bin";
 +};
 +
 +&spk_amp_r {
-+	firmware-name = "qcom/sm8550/ayn/odin2portal/aw883xx_acf.bin";
++	firmware-name = "qcom/sm8550/ayn/odin2/aw883xx_acf.bin";
 +};
