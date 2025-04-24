@@ -2,10 +2,10 @@
 # Copyright (C) 2024-present ROCKNIX (https://github.com/ROCKNIX)
 
 PKG_NAME="lime3ds-sa"
-PKG_VERSION="c9dbb5bb40d90dfa6a2b085d152ae6ecf915b2f9"
+PKG_VERSION="2119.1"
 PKG_LICENSE="GPL"
 PKG_SITE="https://github.com/Lime3DS/Lime3DS"
-PKG_URL="https://github.com/Lime3DS/lime3ds-archive.git"
+PKG_URL="https://github.com/ROCKNIX/packages/raw/main/${PKG_NAME}-${PKG_VERSION}.tar.xz"
 PKG_DEPENDS_TARGET="toolchain ffmpeg mesa SDL2 boost zlib libusb boost zstd control-gen spirv-tools qt6"
 PKG_LONGDESC="Lime3DS - Nintendo 3DS emulator"
 PKG_TOOLCHAIN="cmake"
