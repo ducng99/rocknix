@@ -30,7 +30,7 @@ index 58d9ab342fe9ee..b9da8509137dfd 100644
  	status = "okay";
 +
 +	zap-shader {
-+		firmware-name = "qcom/sm8550/ayn/odin2/a740_zap.mbn";
++		firmware-name = "qcom/sm8550/ayn/a740_zap.mbn";
 +	};
  };
  
@@ -40,8 +40,8 @@ index 58d9ab342fe9ee..b9da8509137dfd 100644
  };
  
 +&remoteproc_cdsp {
-+	firmware-name = "qcom/sm8550/ayn/odin2/cdsp.mbn",
-+			"qcom/sm8550/ayn/odin2/cdsp_dtb.mbn";
++	firmware-name = "qcom/sm8550/ayn/cdsp.mbn",
++			"qcom/sm8550/ayn/cdsp_dtb.mbn";
 +	status = "okay";
 +};
 +
@@ -237,17 +237,17 @@ index 00000000000000..847df39c39cdcc
 +};
 +
 +&remoteproc_adsp {
-+	firmware-name = "qcom/sm8550/ayn/odin2/adsp.mbn",
-+			"qcom/sm8550/ayn/odin2/adsp_dtb.mbn";
++	firmware-name = "qcom/sm8550/ayn/odin2mini/adsp.mbn",
++			"qcom/sm8550/ayn/odin2mini/adsp_dtb.mbn";
 +	status = "okay";
 +};
 +
 +&spk_amp_l {
-+	firmware-name = "qcom/sm8550/ayn/odin2/aw883xx_acf.bin";
++	firmware-name = "qcom/sm8550/ayn/odin2mini/aw883xx_acf.bin";
 +};
 +
 +&spk_amp_r {
-+	firmware-name = "qcom/sm8550/ayn/odin2/aw883xx_acf.bin";
++	firmware-name = "qcom/sm8550/ayn/odin2mini/aw883xx_acf.bin";
 +};
 diff --git a/arch/arm64/boot/dts/qcom/qcs8550-ayn-odin2portal.dts b/arch/arm64/boot/dts/qcom/qcs8550-ayn-odin2portal.dts
 index f04c275966e453..057aa2965fc264 100644
@@ -272,7 +272,7 @@ index f04c275966e453..057aa2965fc264 100644
  
 -&gpu {
 -	zap-shader {
--		firmware-name = "qcom/sm8550/ayn/odin2/a740_zap.mbn";
+-		firmware-name = "qcom/sm8550/ayn/a740_zap.mbn";
 -	};
 -};
 -
@@ -284,11 +284,11 @@ index f04c275966e453..057aa2965fc264 100644
  };
  
 -&remoteproc_cdsp {
--	firmware-name = "qcom/sm8550/ayn/odin2/cdsp.mbn",
--			"qcom/sm8550/ayn/odin2/cdsp_dtb.mbn";
+-	firmware-name = "qcom/sm8550/ayn/cdsp.mbn",
+-			"qcom/sm8550/ayn/cdsp_dtb.mbn";
 -	status = "okay";
 -};
 -
  &spk_amp_l {
- 	firmware-name = "qcom/sm8550/ayn/odin2/aw883xx_acf.bin";
+ 	firmware-name = "qcom/sm8550/ayn/odin2portal/aw883xx_acf.bin";
  };
