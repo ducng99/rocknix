@@ -44,11 +44,13 @@ if [ -f "$SYSTEM_ROOT/usr/share/bootloader/grubenv" ]; then
 fi
 
 if [ -f "$SYSTEM_ROOT/usr/share/bootloader/u-boot-nodtb.bin" ]; then
+  mkdir -p $BOOT_ROOT/boot
   echo "Updating u-boot-nodtb.bin..."
   cp -p $SYSTEM_ROOT/usr/share/bootloader/u-boot-nodtb.bin $BOOT_ROOT/boot
 fi
 
 if [ -f "$SYSTEM_ROOT/usr/share/bootloader/u-boot.dtb" ]; then
+  mkdir -p $BOOT_ROOT/boot
   echo "Updating u-boot.dtb..."
   cp -p $SYSTEM_ROOT/usr/share/bootloader/u-boot.dtb $BOOT_ROOT/boot
 fi
