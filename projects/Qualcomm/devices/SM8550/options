@@ -69,7 +69,7 @@
     ROCKNIX_JOYPAD="no"
 
   # additional packages to install
-    ADDITIONAL_PACKAGES=""
+    ADDITIONAL_PACKAGES="u-boot"
 
   # additional Firmware to use ( )
   # Space separated list is supported,
