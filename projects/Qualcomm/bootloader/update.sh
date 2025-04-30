@@ -21,25 +21,25 @@ for dtb in $SYSTEM_ROOT/usr/share/bootloader/*.dtb; do
   cp -p $dtb $BOOT_ROOT
 done
 
-if [ -f "$SYSTEM_ROOT/usr/share/bootloader/bootaa64.efi" ]; then
+if [ -f "$SYSTEM_ROOT/usr/share/bootloader/EFI/BOOT/bootaa64.efi" ]; then
   echo "Updating EFI..."
-  cp -p $SYSTEM_ROOT/usr/share/bootloader/bootaa64.efi $BOOT_ROOT/efi/boot
+  cp -p $SYSTEM_ROOT/usr/share/bootloader/EFI/BOOT/bootaa64.efi $BOOT_ROOT/EFI/BOOT
 fi
 
-if [ -f "$SYSTEM_ROOT/usr/share/bootloader/grub.cfg" ]; then
-  echo "Updating GRUB..."
-  cp -p $SYSTEM_ROOT/usr/share/bootloader/grub.cfg $BOOT_ROOT/efi/boot
+if [ -f "$SYSTEM_ROOT/usr/share/bootloader/EFI/BOOT/grub.cfg" ]; then
+  echo "Updating grub.cfg..."
+  cp -p $SYSTEM_ROOT/usr/share/bootloader/EFI/BOOT/grub.cfg $BOOT_ROOT/EFI/BOOT
 fi
 
 if [ -f "$SYSTEM_ROOT/usr/share/bootloader/dejavu-mono.pf2" ]; then
   echo "Updating dejavu-mono.pf2..."
-  cp -p $SYSTEM_ROOT/usr/share/bootloader/dejavu-mono.pf2 $BOOT_ROOT/efi/boot
+  cp -p $SYSTEM_ROOT/usr/share/bootloader/dejavu-mono.pf2 $BOOT_ROOT/EFI/BOOT
 fi
 
 if [ -f "$SYSTEM_ROOT/usr/share/bootloader/grubenv" ]; then
   if [ ! -f "$BOOT_ROOT/efi/boot/grubenv" ]; then
     echo "Installing grubenv..."
-    cp -p $SYSTEM_ROOT/usr/share/bootloader/grubenv $BOOT_ROOT/efi/boot
+    cp -p $SYSTEM_ROOT/usr/share/bootloader/grubenv $BOOT_ROOT/EFI/BOOT
   fi
 fi
 
