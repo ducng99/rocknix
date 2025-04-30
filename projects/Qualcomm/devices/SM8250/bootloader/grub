@@ -3,7 +3,8 @@
 
 source ${PROJECT_DIR}/${PROJECT}/devices/${DEVICE}/options
 
-cat << EOF > "${LE_TMP}/grub.cfg"
+mkdir -p "${INSTALL}/usr/share/bootloader/EFI/BOOT"
+cat << EOF > "${INSTALL}/usr/share/bootloader/EFI/BOOT/grub.cfg"
 set timeout=""
 set default=""
 menuentry "Retroid Pocket 5" {
