@@ -79,6 +79,6 @@ makeinstall_target() {
   find_file_path bootloader/update.sh && cp -av ${FOUND_PATH} ${INSTALL}/usr/share/bootloader
 
   if [ -d ${PKG_DIR}/sources/${DEVICE} ]; then
-    cp -av ${PKG_DIR}/sources/${DEVICE}/* ${INSTALL}/usr/share/bootloader
+    cp -av ${PKG_DIR}/sources/${DEVICE}/* ${INSTALL}/usr/share/bootloader/EFI/BOOT
   fi
 }
