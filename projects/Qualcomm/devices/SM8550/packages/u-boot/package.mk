@@ -27,11 +27,11 @@ make_target() {
 }
 
 makeinstall_target() {
-  mkdir -p ${INSTALL}/usr/share/bootloader
+  mkdir -p ${INSTALL}/usr/share/bootloader/boot
 
   # Always install the update script
   find_file_path bootloader/update.sh && cp -av ${FOUND_PATH} ${INSTALL}/usr/share/bootloader
 
-  cp -av u-boot-nodtb.bin ${INSTALL}/usr/share/bootloader
-  cp -av dts/upstream/src/arm64/qcom/qcs8550-ayn-odin2-common.dtb ${INSTALL}/usr/share/bootloader/u-boot.dtb
+  cp -av u-boot-nodtb.bin ${INSTALL}/usr/share/bootloader/boot
+  cp -av dts/upstream/src/arm64/qcom/qcs8550-ayn-odin2-common.dtb ${INSTALL}/usr/share/bootloader/boot/u-boot.dtb
 }

@@ -16,9 +16,15 @@ mkimage_efi() {
 
 mkimage_linuxloader() {
   echo "image: copying LinuxLoader.cfg..."
-  mcopy "${RELEASE_DIR}/3rdparty/bootloader/LinuxLoader.cfg" ::
+  mcopy "${PROJECT_DIR}/${PROJECT}/devices/${DEVICE}/bootloader/LinuxLoader.cfg" ::
+}
+
+mkimage_uboot() {
+  echo "image: copying u-boot files..."
+  mcopy -s -o "${RELEASE_DIR}/3rdparty/bootloader/boot" ::
 }
 
 mkimage_dtb
 mkimage_efi
 mkimage_linuxloader
+mkimage_uboot

@@ -31,25 +31,25 @@ if [ -f "$SYSTEM_ROOT/usr/share/bootloader/EFI/BOOT/grub.cfg" ]; then
   cp -p $SYSTEM_ROOT/usr/share/bootloader/EFI/BOOT/grub.cfg $BOOT_ROOT/EFI/BOOT
 fi
 
-if [ -f "$SYSTEM_ROOT/usr/share/bootloader/dejavu-mono.pf2" ]; then
+if [ -f "$SYSTEM_ROOT/usr/share/bootloader/EFI/BOOT/dejavu-mono.pf2" ]; then
   echo "Updating dejavu-mono.pf2..."
-  cp -p $SYSTEM_ROOT/usr/share/bootloader/dejavu-mono.pf2 $BOOT_ROOT/EFI/BOOT
+  cp -p $SYSTEM_ROOT/usr/share/bootloader/EFI/BOOT/dejavu-mono.pf2 $BOOT_ROOT/EFI/BOOT
 fi
 
-if [ -f "$SYSTEM_ROOT/usr/share/bootloader/grubenv" ]; then
+if [ -f "$SYSTEM_ROOT/usr/share/bootloader/EFI/BOOT/grubenv" ]; then
   if [ ! -f "$BOOT_ROOT/efi/boot/grubenv" ]; then
     echo "Installing grubenv..."
-    cp -p $SYSTEM_ROOT/usr/share/bootloader/grubenv $BOOT_ROOT/EFI/BOOT
+    cp -p $SYSTEM_ROOT/usr/share/bootloader/EFI/BOOT/grubenv $BOOT_ROOT/EFI/BOOT
   fi
 fi
 
-if [ -f "$SYSTEM_ROOT/usr/share/bootloader/u-boot-nodtb.bin" ]; then
+if [ -f "$SYSTEM_ROOT/usr/share/bootloader/boot/u-boot-nodtb.bin" ]; then
   mkdir -p $BOOT_ROOT/boot
   echo "Updating u-boot-nodtb.bin..."
   cp -p $SYSTEM_ROOT/usr/share/bootloader/u-boot-nodtb.bin $BOOT_ROOT/boot
 fi
 
-if [ -f "$SYSTEM_ROOT/usr/share/bootloader/u-boot.dtb" ]; then
+if [ -f "$SYSTEM_ROOT/usr/share/bootloader/boot/u-boot.dtb" ]; then
   mkdir -p $BOOT_ROOT/boot
   echo "Updating u-boot.dtb..."
   cp -p $SYSTEM_ROOT/usr/share/bootloader/u-boot.dtb $BOOT_ROOT/boot
