@@ -14,7 +14,7 @@ new file mode 100644
 index 000000000000..cab80e1c81e5
 --- /dev/null
 +++ b/arch/arm64/boot/dts/qcom/sm8250-retroidpocket-flip2.dts
-@@ -0,0 +1,40 @@
+@@ -0,0 +1,47 @@
 +// SPDX-License-Identifier: GPL-2.0
 +/*
 + * Copyright (c) 2025, ROCKNIX <https://rocknix.org>.
@@ -22,20 +22,27 @@ index 000000000000..cab80e1c81e5
 +
 +/dts-v1/;
 +
++#include <dt-bindings/input/gpio-keys.h>
 +#include "sm8250-retroidpocket-rp5.dts"
 +
 +/ {
 +	model = "Retroid Pocket Flip2";
 +	compatible = "retroidpocket,rpflip2", "qcom,sm8250";
 +
-+	hall_sensor: hall-sensor {
-+		compatible = "rocknix,rpflip2-hall-sensor";
++	gpio-keys-lid {
++		compatible = "gpio-keys";
 +		pinctrl-names = "default";
 +		pinctrl-0 = <&hall_sensor_default>;
-+		hall-gpios = <&tlmm 123 GPIO_ACTIVE_HIGH>;
-+		debounce-interval = <50>;
-+		wakeup-source;
-+        };
++
++		lid-switch {
++			label = "Lid Switch";
++			gpios = <&tlmm 123 GPIO_ACTIVE_LOW>;
++			linux,can-disable;
++			linux,code = <SW_LID>;
++			linux,input-type = <EV_SW>;
++			wakeup-source;
++		};
++	};
 +};
 +
 +&apps_rsc {
