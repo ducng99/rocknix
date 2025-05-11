@@ -46,9 +46,8 @@ fi
 
 if [ "${WIFI_TYPE}" = "1" ]
 then
-  GENERATED=($(awk '! /^HW_|BUILD_DATE/ {print}' /etc/os-release | md5sum))
-  SSID="${GENERATED[0]:0:10}"
-  PSK="${GENERATED[0]: -10}"
+  SSID="NETPLAY_AP"
+  PSK="deadbeef"
 fi
 
 if [ ! -d "${CFG_ROOT}/connman" ]
