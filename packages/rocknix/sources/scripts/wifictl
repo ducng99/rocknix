@@ -129,6 +129,8 @@ EOF
 
   systemctl start hostapd
 
+  set_setting wifi.enabled 1
+
   exit 0
 }
 
