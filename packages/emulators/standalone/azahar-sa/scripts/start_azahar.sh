@@ -19,7 +19,7 @@ ROMS_DIR="/storage/roms/3ds"
 
 # Make sure azahar config directory exists
 [ ! -d ${CONF_DIR} ] && cp -r ${IMMUTABLE_CONF_DIR} /storage/.config
-[ ! -d ${CONF_DIR}/log ] && mkdir -p ${${CONF_DIR}}/log
+[ ! -d ${CONF_DIR}/log ] && mkdir -p ${CONF_DIR}/log
 
 # Move sdmc & nand to 3ds roms folder
 [ ! -d /storage/roms/3ds/azahar/sdmc ] && mkdir -p ${ROMS_DIR}/azahar/sdmc
