@@ -25,3 +25,8 @@ PKG_CONFIGURE_OPTS_TARGET="--disable-sdltest \
                            --enable-xpm \
                            --enable-xv \
                            --enable-webp"
+
+post_makeinstall_target() {
+  mkdir -p ${TOOLCHAIN}/include/SDL2
+  cp -P ${PKG_BUILD}/include/SDL_image.h ${TOOLCHAIN}/include/SDL2/
+}

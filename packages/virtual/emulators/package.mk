@@ -1285,6 +1285,10 @@ makeinstall_target() {
   add_emu_core music gmu gmu true
   add_es_system music
 
+  ### Book Reader
+  add_emu_core books pixelreader pixelreader true
+  add_es_system books
+
   ### Moonlight
   add_es_system moonlight
 
